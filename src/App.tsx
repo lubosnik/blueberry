@@ -1,24 +1,22 @@
-import './App.css';
 import { Header } from './library/Header/';
 import { Card } from './library/Card/';
 import bg from '../public/testimage.jpg';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Footer } from './library/Footer';
-import { useResize } from './hooks/useResize';
 
 function App() {
   const header = useRef<HTMLDivElement>(null);
-  const [headerHeight, setHeaderHeight] = useState(50);
-  console.log(header.current?.scrollHeight);
-  const { height } = useResize(header);
-  console.log(height);
-  useLayoutEffect(() => {
-    if (header.current) {
-      const h = header.current.offsetHeight;
+  // const [headerHeight, setHeaderHeight] = useState(50);
+  // console.log(header.current?.scrollHeight);
+  // const { height } = useResize(header);
+  // console.log(height);
+  // useLayoutEffect(() => {
+  //   if (header.current) {
+  //     const h = header.current.offsetHeight;
 
-      setHeaderHeight(h);
-    }
-  }, [header.current?.offsetHeight]);
+  //     setHeaderHeight(h);
+  //   }
+  // }, [header.current?.offsetHeight]);
 
   return (
     <div className="h-full bg-white ">

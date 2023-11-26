@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import bgImage from './assets/bgImage.png';
 import { Blueberry } from './assets/Blueberry';
 
-export const Header = forwardRef<HTMLDivElement>((props, ref) => {
+export const Header = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <header ref={ref} className="static flex items-center justify-center">
       <img className="w-full" src={bgImage} />
