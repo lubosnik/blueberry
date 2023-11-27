@@ -22,10 +22,10 @@ type CardProps = {
 
 export const Card = ({ src, alt, actionTitle, onClick, text }: CardProps) => {
   return (
-    <div className="container flex flex-col items-center shadow-md rounded-b-lg">
+    <div className="container mx-auto flex flex-col items-center shadow-md rounded-b-lg">
       <img className="rounded-t-lg shadow-lg" src={src} alt={alt} />
       {text && <div className="text-black text-sm p-3 text-center">{text}</div>}
-      <div className="p-2 w-5/6    flex items-center justify-center ">
+      <div className="my-2 mr-2 w-full flex items-center justify-center ">
         <button
           className="py-2 bg-purple-500 w-1/2 text-white rounded-lg "
           onClick={(e) => onClick?.(e)}

@@ -7,7 +7,7 @@ export const Header = forwardRef<HTMLDivElement>((_, ref) => {
     <header ref={ref} className="static flex items-center justify-center">
       <img className="w-full" src={bgImage} />
       <header className="absolute flex flex-col items-center">
-        <h1 className="mx-auto text-center text-1xl font-semibold tracking-widest">
+        <h1 className="mx-auto text-center text-2xl font-semibold tracking-widest">
           Folklórny súbor
           <br className="mb-2" />
           <span className="inline-flex align-middle">
@@ -15,7 +15,7 @@ export const Header = forwardRef<HTMLDivElement>((_, ref) => {
             <span className="inline mt-2 z-10">
               <Blueberry />
             </span>
-            <span className="ml-[-10px]">oriedka</span>
+            <span className="ml-[-16px]">oriedka</span>
           </span>
         </h1>
         <svg

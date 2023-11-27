@@ -1,8 +1,8 @@
 export const Blueberry = () => {
   return (
     <svg
-      width="13"
-      height="12"
+      width="19"
+      height="18"
       viewBox="0 0 18 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
