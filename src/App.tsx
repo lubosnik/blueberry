@@ -36,7 +36,7 @@ function App() {
               </p>
             </div>
             <div className="basis-auto sm:basis-1/2">
-              <Card src={bg} actionTitle="Galéria" alt="Galery of events" />
+              <Card src={bg.src} actionTitle="Galéria" alt="Galery of events" />
             </div>
           </div>
           <p className="text-purple-600 text-center  visible sm:hidden   font-bold text-2xl my-6 ">
