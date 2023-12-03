@@ -1,21 +1,19 @@
-import { Header } from './library/Header/';
-import { Card } from './library/Card/';
-import bg from '../public/testimage.jpg';
-import { useRef } from 'react';
-import { Footer } from './library/Footer';
+import Image from 'next/image';
+import { Header } from './library/Header';
 import { Bow } from './library/Bow';
+import { Card } from './library/Card';
+import bg from '../public/testimage.jpg';
+import { Footer } from './library/Footer';
 
-function App() {
-  const header = useRef<HTMLDivElement>(null);
-
+export default function Home() {
   return (
     <div className="h-full bg-white ">
       <div className="z-0">
-        <Header ref={header} />
+        <Header />
       </div>
       <div className="z-10 absolute w-full">
         <div className=" px-5 z-10 bg-slate-50">
-          <div className="text-center pt-6">
+          <div className="text-center pt-6 mb-40">
             <p className="text-purple-600 mb-6 font-bold text-3xl">
               Lorem Ipsum
             </p>
@@ -30,27 +28,31 @@ function App() {
           </div>
           <hr className="bg-slate-400 shadow-sm my-4" />
           <div className="flex flex-row space-y-5 py-5 mx-auto  ">
+            <div className="basis-auto sm:basis-1/2">
+              <Card
+                src={bg.src}
+                actionTitle="Galéria"
+                alt="Galery of events"
+                className="mr-auto"
+              />
+            </div>
             <div className="hidden sm:flex basis-1/2 ">
               <p className="mx-auto my-auto text-3xl text-purple-600">
                 Galéria
               </p>
             </div>
-            <div className="basis-auto sm:basis-1/2">
-              <Card src={bg} actionTitle="Galéria" alt="Galery of events" />
-            </div>
           </div>
+          <hr className="bg-slate-400 shadow-sm h-[1px] my-6 sm:my-16" />
           <p className="text-purple-600 text-center  visible sm:hidden   font-bold text-2xl my-6 ">
             Lorem Ipsum
           </p>
 
-          <hr className="bg-slate-400 shadow-sm h-[1px] my-16" />
-
           <div className="flex flex-col-reverse sm:flex-row text-center justify-center sm:justify-around items-center py-6 ">
-            <div className="basis-1/2">
-              <p className="hidden sm:block text-purple-600  text-center sm:text-right font-bold text-2xl my-6 ">
+            <div className="basis-1/2 text-center sm:text-right flex flex-col xl:items-end ">
+              <p className="hidden sm:block text-purple-600  font-bold text-2xl my-6 ">
                 Lorem Ipsum
               </p>
-              <p className="text-2xl  text-center sm:text-right font-light text-gray-700">
+              <p className="text-2xl font-light text-gray-700 w-full xl:w-1/2">
                 Podporujeme folklórnu hudbu a tanec s hrdosťou! Sme hľadajúci
                 sponzor pre našu ľudovú hudobnú udalosť, ktorá oslavuje bohatú
                 slovenskú kultúru.
@@ -78,5 +80,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
