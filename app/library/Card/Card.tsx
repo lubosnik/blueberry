@@ -28,7 +28,7 @@ export const Card = ({ src, alt, actionTitle, text, className }: CardProps) => {
     <div
       className={`container mx-auto max-w-md flex flex-col items-center shadow-md rounded-b-lg ${className}`}
     >
-      <Image
+      <img
         width={500}
         height={500}
         className="rounded-t-lg shadow-lg"
