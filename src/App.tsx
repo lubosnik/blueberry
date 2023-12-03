@@ -1,9 +1,9 @@
-import { Header } from './library/Header/';
-import { Card } from './library/Card/';
+import { Header } from '../app/library/Header/';
+import { Card } from '../app/library/Card/';
 import bg from '../public/testimage.jpg';
 import { useRef } from 'react';
-import { Footer } from './library/Footer';
-import { Bow } from './library/Bow';
+import { Footer } from '../app/library/Footer';
+import { Bow } from '../app/library/Bow';
 
 function App() {
   const header = useRef<HTMLDivElement>(null);
