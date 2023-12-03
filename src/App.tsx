@@ -23,12 +23,7 @@ function App() {
       <div className="  z-0">
         <Header ref={header} />
       </div>
-      <div
-        // style={{
-        //   marginTop: `${headerHeight}px`,
-        // }}
-        className="absolute"
-      >
+      <div className="absolute w-fulla">
         <div className=" px-5 z-10 bg-slate-50">
           <div className="text-center pt-6">
             <p className="text-purple-600 mb-6 font-bold text-3xl">
@@ -53,12 +48,14 @@ function App() {
           <p className="text-purple-600 text-center  visible sm:hidden   font-bold text-2xl my-6 ">
             Lorem Ipsum
           </p>
-          <div className="flex flex-col-reverse sm:flex-row text-center justify-center sm:justify-around items-center py-6">
+          <hr className="bg-slate-400 shadow-sm h-[1px] my-16" />
+
+          <div className="flex flex-col-reverse sm:flex-row text-center justify-center sm:justify-around items-center py-6 ">
             <div className="basis-1/2">
               <p className="hidden sm:block text-purple-600  text-center sm:text-right font-bold text-2xl my-6 ">
                 Lorem Ipsum
               </p>
-              <p className="text-black font-normal text-2xl  text-center sm:text-right">
+              <p className="text-black text-2xl  text-center sm:text-right font-light text-gray-700">
                 Podporujeme folklórnu hudbu a tanec s hrdosťou! Sme hľadajúci
                 sponzor pre našu ľudovú hudobnú udalosť, ktorá oslavuje bohatú
                 slovenskú kultúru.
@@ -78,6 +75,7 @@ function App() {
             </svg>
           </div>
         </div>
+
         <div className="absolute w-full">
           <Footer />
         </div>
