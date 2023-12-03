@@ -55,7 +55,7 @@ function App() {
               <p className="hidden sm:block text-purple-600  text-center sm:text-right font-bold text-2xl my-6 ">
                 Lorem Ipsum
               </p>
-              <p className="text-black text-2xl  text-center sm:text-right font-light text-gray-700">
+              <p className="text-2xl  text-center sm:text-right font-light text-gray-700">
                 Podporujeme folklórnu hudbu a tanec s hrdosťou! Sme hľadajúci
                 sponzor pre našu ľudovú hudobnú udalosť, ktorá oslavuje bohatú
                 slovenskú kultúru.
