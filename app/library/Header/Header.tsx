@@ -7,9 +7,12 @@ export const Header = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <header
       ref={ref}
-      className="static backdrop-blur-md flex items-center justify-center max-h-[70vh]  max-w-full overflow-hidden z-2"
+      className="static backdrop-blur-md flex items-center justify-center max-h-[40vh]  max-w-full overflow-hidden z-2"
     >
-      <img className="w-full z-9 blur-md" src={bgImage.src} />
+      <img
+        className="w-full z-9 blur-md opacity-50 bg-gradient-to-t from-purple-950 from-80% to-transparent"
+        src={bgImage.src}
+      />
       <header className="absolute flex flex-col items-center">
         <h1 className="mx-auto text-center text-2xl font-light tracking-widest">
           Folklórny súbor

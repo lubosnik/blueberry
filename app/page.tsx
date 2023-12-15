@@ -2,34 +2,28 @@ import { Header } from './library/Header';
 import { Bow } from './library/Bow';
 import bg from '../public/testimage.jpg';
 import { Footer } from './library/Footer';
-import { PropsWithChildren } from 'react';
+import { Title } from './library/Title';
+import { Text } from './library/Text';
+import { Hr } from './library/Hr';
 
 export default function Home() {
   const gradientClasses =
-    'bg-gradient-radial from-fuchsia-900/25 to-purple-950 to-50%';
-  const Title = ({ children }: PropsWithChildren) => {
-    return <p className="text-pink-500 font-light text-3xl">{children}</p>;
-  };
-  const Hr = () => {
-    return (
-      <div className=" w-full h-[1px] bg-gradient-to-r from-transparent via-pink-500 via-50% to-transparent" />
-    );
-  };
+    'bg-gradient-radial from-fuchsia-900/25 to-transparent to-50%';
 
   return (
     <div className="h-full text-white ">
       <div className="fixed h-full w-full bg-purple-950 z-[-1]" />
       <Header />
       <div className="z-10 absolute w-full">
-        <div className="px-16 z-10 space-y-14">
+        <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-14">
           <div
-            className={`text-center pt-6 mb-20 backdrop-blur-md space-y-10 ${gradientClasses}`}
+            className={`flex flex-col items-center text-justify sm:text-center pt-6 mb-20 backdrop-blur-md space-y-10 ${gradientClasses}`}
           >
             <Title>Lorem Ipsum</Title>
-            <p className="text-white font-extralight text-3xl">
+            <Text>
               Posilňujeme Tradíciu: <br className="hidden sm:inline" /> Pripojte
               sa k nám ako hrdý sponzor folklórnej hudobnej slávnosti!
-            </p>
+            </Text>
           </div>
           <div>
             <Bow className="mx-auto" />
@@ -41,16 +35,16 @@ export default function Home() {
           </div>
           <div className="flex flex-col-reverse sm:flex-row text-center justify-center sm:justify-around items-center py-6 ">
             <div
-              className={`basis-1/2 text-center sm:text-right flex flex-col xl:items-end ${gradientClasses}`}
+              className={`basis-1/2 text-justify sm:text-right flex flex-col xl:items-end ${gradientClasses}`}
             >
               <div className="hidden sm:block mb-6">
                 <Title> Lorem Ipsum</Title>
               </div>
-              <p className="text-2xl font-extralight w-full xl:w-1/2">
+              <Text>
                 Podporujeme folklórnu hudbu a tanec s hrdosťou! Sme hľadajúci
                 sponzor pre našu ľudovú hudobnú udalosť, ktorá oslavuje bohatú
                 slovenskú kultúru.
-              </p>
+              </Text>
             </div>
             <svg
               className="basis-1/2"
@@ -73,23 +67,20 @@ export default function Home() {
             <div
               className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm `}
             >
-              <div className="absolute w-9/12 group-hover:w-full  h-full bg-gradient-to-l from-purple-950 to-[60%] to-transparent transition-all" />
-
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
-              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 to-[80%] to-transparent transition-all" />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
             </div>
-            <div className="flex basis-1/2">
+            <div className="flex flex-col justify-between basis-1/2">
+              <Text>Objevte kouzlo lidového tance v naší galerii</Text>
               <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3">
-                <Title>Galéria</Title>
-                <span className="text-transparent w-0 group-hover:w-full group-hover:text-purple-500 transition-all">
-                  {'->'}
-                </span>
+                <a href="/galery" className="text-pink-500 text-xl font-light">
+                  Pozriet si Galériu
+                </a>
               </div>
             </div>
           </div>
