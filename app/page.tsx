@@ -1,58 +1,52 @@
-import Image from 'next/image';
 import { Header } from './library/Header';
 import { Bow } from './library/Bow';
-import { Card } from './library/Card';
 import bg from '../public/testimage.jpg';
 import { Footer } from './library/Footer';
+import { PropsWithChildren } from 'react';
 
 export default function Home() {
+  const gradientClasses =
+    'bg-gradient-radial from-fuchsia-900/25 to-purple-950 to-50%';
+  const Title = ({ children }: PropsWithChildren) => {
+    return <p className="text-pink-500 font-light text-3xl">{children}</p>;
+  };
+  const Hr = () => {
+    return (
+      <div className=" w-full h-[1px] bg-gradient-to-r from-transparent via-pink-500 via-50% to-transparent" />
+    );
+  };
+
   return (
-    <div className="h-full bg-white ">
-      <div className="z-0">
-        <Header />
-      </div>
+    <div className="h-full text-white ">
+      <div className="fixed h-full w-full bg-purple-950 z-[-1]" />
+      <Header />
       <div className="z-10 absolute w-full">
-        <div className=" px-5 z-10 bg-slate-50">
-          <div className="text-center pt-6 mb-40">
-            <p className="text-purple-600 mb-6 font-bold text-3xl">
-              Lorem Ipsum
-            </p>
-            <p className="text-gray-700  font-light text-3xl">
-              Posilňujeme Tradíciu: <br className="hidden  sm:inline" />{' '}
-              Pripojte sa k nám ako hrdý sponzor folklórnej hudobnej slávnosti!
+        <div className="px-16 z-10 space-y-14">
+          <div
+            className={`text-center pt-6 mb-20 backdrop-blur-md space-y-10 ${gradientClasses}`}
+          >
+            <Title>Lorem Ipsum</Title>
+            <p className="text-white font-extralight text-3xl">
+              Posilňujeme Tradíciu: <br className="hidden sm:inline" /> Pripojte
+              sa k nám ako hrdý sponzor folklórnej hudobnej slávnosti!
             </p>
           </div>
-          <hr className="bg-slate-400 shadow-sm my-4" />
           <div>
             <Bow className="mx-auto" />
           </div>
-          <hr className="bg-slate-400 shadow-sm my-4" />
-          <div className="flex flex-row space-y-5 py-5 mx-auto  ">
-            <div className="basis-auto sm:basis-1/2">
-              <Card
-                src={bg.src}
-                actionTitle="Galéria"
-                alt="Galery of events"
-                className="mr-auto"
-              />
-            </div>
-            <div className="hidden sm:flex basis-1/2 ">
-              <p className="mx-auto my-auto text-3xl text-purple-600">
-                Galéria
-              </p>
-            </div>
-          </div>
-          <hr className="bg-slate-400 shadow-sm h-[1px] my-6 sm:my-16" />
-          <p className="text-purple-600 text-center  visible sm:hidden   font-bold text-2xl my-6 ">
-            Lorem Ipsum
-          </p>
+          <Hr />
 
+          <div className="visible sm:hidden">
+            <Title>Lorem Ipsum</Title>
+          </div>
           <div className="flex flex-col-reverse sm:flex-row text-center justify-center sm:justify-around items-center py-6 ">
-            <div className="basis-1/2 text-center sm:text-right flex flex-col xl:items-end ">
-              <p className="hidden sm:block text-purple-600  font-bold text-2xl my-6 ">
-                Lorem Ipsum
-              </p>
-              <p className="text-2xl font-light text-gray-700 w-full xl:w-1/2">
+            <div
+              className={`basis-1/2 text-center sm:text-right flex flex-col xl:items-end ${gradientClasses}`}
+            >
+              <div className="hidden sm:block mb-6">
+                <Title> Lorem Ipsum</Title>
+              </div>
+              <p className="text-2xl font-extralight w-full xl:w-1/2">
                 Podporujeme folklórnu hudbu a tanec s hrdosťou! Sme hľadajúci
                 sponzor pre našu ľudovú hudobnú udalosť, ktorá oslavuje bohatú
                 slovenskú kultúru.
@@ -71,6 +65,36 @@ export default function Home() {
               />
             </svg>
           </div>
+
+          <Hr />
+
+          {/* Galery */}
+          <div className="flex flex-row group py-5 mx-auto ">
+            <div
+              className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm `}
+            >
+              <div className="absolute w-9/12 group-hover:w-full  h-full bg-gradient-to-l from-purple-950 to-[60%] to-transparent transition-all" />
+
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+              <img width={100} height={100} src={bg.src} alt={'asdklfj'} />
+            </div>
+            <div className="flex basis-1/2">
+              <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3">
+                <Title>Galéria</Title>
+                <span className="text-transparent w-0 group-hover:w-full group-hover:text-purple-500 transition-all">
+                  {'->'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <Hr />
         </div>
 
         <div className="absolute w-full">

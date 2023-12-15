@@ -1,25 +1,17 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef } from 'react';
 import bgImage from '../../../public/bgImage.png';
 import { Blueberry } from './assets/Blueberry';
 import { Bow } from '../Bow';
 
 export const Header = forwardRef<HTMLDivElement>((_, ref) => {
-  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <header
       ref={ref}
-      className="static flex items-center justify-center max-h-[70vh]  max-w-full overflow-hidden"
+      className="static backdrop-blur-md flex items-center justify-center max-h-[70vh]  max-w-full overflow-hidden z-2"
     >
-      {!isLoaded && <div> Loading</div>}
-      {isLoaded && (
-        <img
-          className=" w-full "
-          src={bgImage.src}
-          onLoad={() => setIsLoaded(true)}
-        />
-      )}
+      <img className="w-full z-9 blur-md" src={bgImage.src} />
       <header className="absolute flex flex-col items-center">
-        <h1 className="mx-auto text-center text-2xl font-semibold tracking-widest">
+        <h1 className="mx-auto text-center text-2xl font-light tracking-widest">
           Folklórny súbor
           <br className="mb-2" />
           <span className="inline-flex align-middle">

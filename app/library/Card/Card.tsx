@@ -31,16 +31,13 @@ export const Card = ({ src, alt, actionTitle, text, className }: CardProps) => {
       <img
         width={500}
         height={500}
-        className="rounded-t-lg shadow-lg"
+        className="rounded-t-md shadow-lg"
         src={src}
         alt={alt}
       />
       {text && <div className="text-black text-sm p-3 text-center">{text}</div>}
       <div className="my-2 mr-2 w-full flex items-center justify-center ">
-        <button
-          className="py-2 bg-purple-500 w-1/2 text-white rounded-lg "
-          // onClick={(e) => onClick?.(e)}
-        >
+        <button className="py-2 bg-purple-500 w-1/2 text-white rounded-lg ">
           <Link href={'/galery'}>{actionTitle}</Link>
         </button>
       </div>
