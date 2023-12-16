@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="h-full text-white ">
-      <div className="fixed h-full w-full bg-purple-950 z-[-1]" />
+      <div className="fixed h-full w-full bg-gradient-to-r from-gray-900 via-purple-950/75 to-purple-950 z-[-1]" />
       <Header />
       <div className="z-10 absolute w-full">
         <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-14">
@@ -65,9 +65,9 @@ export default function Home() {
           {/* Galery */}
           <div className="flex flex-row group py-5 mx-auto ">
             <div
-              className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm `}
+              className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm ml-auto mr-0`}
             >
-              <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 to-[80%] to-transparent transition-all" />
+              <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 from-[-30%] to-[80%] to-transparent transition-all" />
               <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
               <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
               <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
