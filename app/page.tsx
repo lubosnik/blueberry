@@ -67,13 +67,21 @@ export default function Home() {
             <div
               className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm ml-auto mr-0`}
             >
-              <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 from-[-30%] to-[80%] to-transparent transition-all" />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
-              <img width={150} height={150} src={bg.src} alt={'asdklfj'} />
+              {/* <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 from-[-30%] to-[80%] to-transparent transition-all" /> */}
+              <img
+                className="absolute top-1 left-5"
+                width={150}
+                height={150}
+                src={bg.src}
+                alt={'asdklfj'}
+              />
+              <img
+                className="absolute top-20 left-20 group-hover:top-30 group-hover:left-30 shadow-gray-700"
+                width={150}
+                height={150}
+                src={bg.src}
+                alt={'asdklfj'}
+              />
             </div>
             <div className="flex flex-col justify-between basis-1/2">
               <Text>Objevte kouzlo lidového tance v naší galerii</Text>
