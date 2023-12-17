@@ -79,22 +79,17 @@ export default function Home() {
           <Hr />
 
           {/* Galery */}
-          <div className="flex flex-row group py-5 mx-auto ">
+          <div className="relative flex flex-col sm:flex-row group py-5 mx-auto  ">
             <div
-              className={`container mx-auto max-w-lg flex gap-1 flex-wrap basis-1/2 justify-end backdrop-blur-sm ml-auto mr-0`}
+              className={`mx-auto max-w-lg h-[150px] flex gap-1 self-center `}
             >
-              {/* <div className="absolute left-0 w-7/12 group-hover:w-full  h-full bg-gradient-to-r from-purple-950 from-[-30%] to-[80%] to-transparent transition-all" /> */}
               <img
-                className="absolute top-1 left-5"
-                width={150}
-                height={150}
+                className="mx-auto object-contain top-1/2 left-1/2 w-[100px] sm:w-[200px]"
                 src={bg.src}
                 alt={'asdklfj'}
               />
               <img
-                className="absolute top-20 left-20 group-hover:top-30 group-hover:left-30 shadow-gray-700"
-                width={150}
-                height={150}
+                className="absolute top-[80px] sm:top-7/12 left-1/2 w-[100px] sm:w-[200px]"
                 src={bg.src}
                 alt={'asdklfj'}
               />
@@ -102,9 +97,9 @@ export default function Home() {
             <div className="flex flex-col justify-between basis-1/2">
               <Text>Objevte kouzlo lidového tance v naší galerii</Text>
               <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3 mb-28">
-                <a href="/galery" className="text-pink-400 text-xl font-light">
-                  Pozriet si Galériu
-                </a>
+                <Button>
+                  <a href="/gallery">Pozriet si Galériu</a>
+                </Button>
               </div>
             </div>
           </div>
