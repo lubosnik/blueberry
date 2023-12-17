@@ -5,17 +5,35 @@ import { Footer } from './library/Footer';
 import { Title } from './library/Title';
 import { Text } from './library/Text';
 import { Hr } from './library/Hr';
+import { PropsWithChildren } from 'react';
 
 export default function Home() {
   const gradientClasses =
     'bg-gradient-radial from-fuchsia-900/25 to-transparent to-50%';
 
+  const Button = ({ children }: PropsWithChildren) => {
+    return (
+      <div className="group bg-gradient-to-r from-pink-600/70 to-pink-600/80 py-2 px-4 rounded-xl tracking-widest hover:shadow-md hover:shadow-gray-950 text-white text-sm font-light hover:text-white/70 active:shadow-inner active:shadow-black">
+        {children}
+      </div>
+    );
+  };
   return (
     <div className="h-full text-white ">
       <div className="fixed h-full w-full bg-gradient-to-r from-gray-900 via-purple-950/75 to-purple-950 z-[-1]" />
       <Header />
       <div className="z-10 absolute w-full">
-        <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-14">
+        <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-5">
+          {/* multipage navigation */}
+          <nav className="flex justify-center py-10 space-x-5">
+            <Button>
+              <a href="/gallery">Pozriet si Galériu</a>
+            </Button>
+            <Button>
+              <a href="/kontakt">Kontaktujte nas</a>
+            </Button>
+          </nav>
+
           <div
             className={`flex flex-col items-center text-justify sm:text-center pt-6 mb-20 backdrop-blur-md space-y-10 ${gradientClasses}`}
           >
@@ -86,7 +104,7 @@ export default function Home() {
             <div className="flex flex-col justify-between basis-1/2">
               <Text>Objevte kouzlo lidového tance v naší galerii</Text>
               <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3">
-                <a href="/galery" className="text-pink-500 text-xl font-light">
+                <a href="/galery" className="text-pink-400 text-xl font-light">
                   Pozriet si Galériu
                 </a>
               </div>
