@@ -23,8 +23,8 @@ export default function Home() {
       <div className="fixed h-full w-full bg-gradient-to-r from-gray-900 via-purple-950/75 to-purple-950 z-[-1]" />
       <Header />
       <div className="z-10 absolute w-full">
-        <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-5">
-          {/* multipage navigation */}
+        <div className="px-6 sm:px-16 z-10 space-y-3 sm:space-y-7">
+          {/* Navigation Button*/}
           <nav className="flex justify-center py-10 space-x-5">
             <Button>
               <a href="/gallery">Pozriet si Galériu</a>
@@ -43,9 +43,7 @@ export default function Home() {
               sa k nám ako hrdý sponzor folklórnej hudobnej slávnosti!
             </Text>
           </div>
-          <div>
-            <Bow className="mx-auto" />
-          </div>
+
           <Hr />
 
           <div className="visible sm:hidden">
@@ -103,7 +101,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-between basis-1/2">
               <Text>Objevte kouzlo lidového tance v naší galerii</Text>
-              <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3">
+              <div className="m-auto flex items-center group-hover:border-purple-600 group-hover:border group-hover:rounded-md cursor-pointer p-3 mb-10">
                 <a href="/galery" className="text-pink-400 text-xl font-light">
                   Pozriet si Galériu
                 </a>
@@ -114,7 +112,7 @@ export default function Home() {
           <Hr />
         </div>
 
-        <div className="absolute w-full">
+        <div className="absolute w-full mt-10">
           <Footer />
         </div>
       </div>
